@@ -6,6 +6,7 @@ import school_management_application.model.Student;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+//import java.util.stream.Collectors;
 
 public class CourseDaoList implements CourseDao{
 
@@ -25,7 +26,7 @@ public class CourseDaoList implements CourseDao{
 
     @Override
     public Course findById(int id) {
-        if (id <= 0) throw new IllegalArgumentException("is is not valid");
+        if (id <= 0) throw new IllegalArgumentException("is not valid");
 
         for(Course course : courses){
             if (course.getId() == id){
@@ -39,6 +40,8 @@ public class CourseDaoList implements CourseDao{
     @Override
     public List<Course> findByName(String name) {
         if (name == null) throw new IllegalArgumentException("name is null");
+
+    //  return courses.stream().filter(c -> c.getCourseName().toLowerCase().contains(name.toLowerCase())).collect(Collectors.toList());
 
         List<Course> courseList = new ArrayList<>();
 
@@ -54,6 +57,8 @@ public class CourseDaoList implements CourseDao{
     @Override
     public List<Course> findByDate(LocalDate date) {
         if (date == null) throw new IllegalArgumentException("date is null");
+
+    //  return courses.stream().filter(c -> c.getStartDate().equals(date)).collect(Collectors.toList());
 
         List<Course> courseList = new ArrayList<>();
 

@@ -4,6 +4,7 @@ import school_management_application.model.Lecture;
 
 import java.util.ArrayList;
 import java.util.List;
+//import java.util.stream.Collectors;
 
 public class LectureDaoList implements LectureDao{
 
@@ -24,6 +25,8 @@ public class LectureDaoList implements LectureDao{
     @Override
     public List<Lecture> findByTitle(String title) {
         if (title == null) throw new IllegalArgumentException("title is null");
+
+    //  return lectures.stream().filter(l -> l.getTitle().toLowerCase().contains(title.toLowerCase())).collect(Collectors.toList());
 
         List<Lecture> lectureList = new ArrayList<>();
 

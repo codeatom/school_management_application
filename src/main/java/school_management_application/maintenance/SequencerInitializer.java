@@ -19,7 +19,7 @@ import static school_management_application.maintenance.StaticResources.SEQUENCE
 @Configuration
 public class SequencerInitializer {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ApplicationInitializer.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(SequencerInitializer.class);
 
     @Value("${spring.profiles.active}")
     private String activeProfile;

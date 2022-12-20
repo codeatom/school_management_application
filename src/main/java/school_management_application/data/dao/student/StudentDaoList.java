@@ -4,6 +4,7 @@ import school_management_application.model.Student;
 
 import java.util.ArrayList;
 import java.util.List;
+//import java.util.stream.Collectors;
 
 public class StudentDaoList implements StudentDao {
 
@@ -37,6 +38,8 @@ public class StudentDaoList implements StudentDao {
     @Override
     public List<Student> findByName(String name) {
         if (name == null) throw new IllegalArgumentException("name is null");
+
+    //  return students.stream().filter(s -> s.getName().toLowerCase().contains(name.toLowerCase())).collect(Collectors.toList());
 
         List<Student> studentList = new ArrayList<>();
 

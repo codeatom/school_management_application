@@ -19,7 +19,7 @@ import static school_management_application.maintenance.StaticResources.SEQUENCE
 @Component
 public class SequencerTerminator {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ApplicationTerminator.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(SequencerTerminator.class);
 
     @Value("${spring.profiles.active}")
     private String activeProfile;
